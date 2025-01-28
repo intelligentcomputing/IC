@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a237e, #311b92, #4a148c);
+            position: relative;
+            overflow-x: hidden;
+        }.header {
+            background-color:#095256;
+            padding: 0.01rem;
+            color:#f5f5f5;
+            position:relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .department-title {
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .department-title h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            animation: fadeInDown 1s;
+        }
+
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            animation: float 15s infinite;
+        }
+
+        .bg-circle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 10%; animation-delay: 0s; }
+        .bg-circle:nth-child(2) { width: 200px; height: 200px; top: 60%; right: 15%; animation-delay: -5s; }
+        .bg-circle:nth-child(3) { width: 150px; height: 150px; bottom: 20%; left: 20%; animation-delay: -10s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .students-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .student-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s;
+            animation: fadeIn 0.5s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .student-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .student-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .student-card:hover .student-image {
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .student-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s;
+        }
+
+        .student-name {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .student-info {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
+        }
+
+        .student-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin: 0.3rem;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .site-header {
+            display:block;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.footer-section {
+    padding: 0 150px;
+}
+
+.footer-section h3 {
+    color: #faf3dd;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-section p {
+
+    color: #5aaa95;
+}
+
+.footer-section a {
+    display:flex;
+    color: #faf3dd;
+    text-decoration:dotted;
+    margin: 8px 0;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #34495e;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-button {
+    background-color: #087f8c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.social-button:hover {
+    background-color: #087f8c;
+    color: #ff0101;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    text-align: center;
+    color: #bdc3c7;
+    font-size: 14px;
+}
+.map-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .footer-section {
+            padding: 0 20px;
+        }
+
+
+
+        .student-card:hover .student-tag {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .students-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="main.html" style="text-decoration: none;">
+                <img src="logo.png" alt="Department Logo" style="cursor: pointer;">
+                </a>
+            </div>
+            <div class="department-title">
+                <h1>DEPARTMENT OF INTELLIGENT COMPUTING</h1>
+            </div>
+            <div class="logo">
+                <a href="facilities.html" style="text-decoration: none;">
+                    <img src="logo3.jpg" alt="College Logo" style="cursor: pointer;">
+                </a>
+            </div>
+            
+        </div>
+        
+    </header>
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <div class="container">
+        <a href="mentorship.html" class="back-button">
+            ← Back to Main Page
+        </a>
+
+        <h1>CJA'S MENTEES</h1>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search by name, course, or department..." onkeyup="searchStudents()">
+        </div>
+
+        <div class="students-grid">
+            <div class="student-card" data-name="Srilalitha P" data-course="192225007" data-department="AI&ML">
+                <div class="student-image">
+                    <img src="SRIS.png" alt="Sarah Johnson">
+                </div>
+                <h2 class="student-name">Srilalitha P</h2>
+                <p class="student-info">3rd Year</p>
+                <p class="student-info">192225007</p>
+                <p class="student-info">AI&ML</p>
+                <div class="student-tags">
+                    <span class="student-tag">Email: srilalithap5007.sse@saveetha.com</span>
+                            </div>
+            </div>
+
+            <div class="student-card" data-name="Chethna S" data-course="192225006" data-department="AI&ML">
+                <div class="student-image">
+                    <img src="CTH.png" alt="Michael Lee">
+                </div>
+                <h2 class="student-name">Chethna S</h2>
+                <p class="student-info">3rd Year</p>
+                <p class="student-info">192225006</p>
+                <p class="student-info">AI&ML</p>
+                <div class="student-tags">
+                    <span class="student-tag">Email: chethnas5006.sse@saveetha.com</span>
+
+                </div>
+            </div>
+
+            <div class="student-card" data-name="Thanusri Daivala" data-course="192225018" data-department="AI&ML">
+                <div class="student-image">
+                    <img src="DAI.png" alt="Emily Wong">
+                </div>
+                <h2 class="student-name">Thanusri Daivala</h2>
+                <p class="student-info">3rd Year</p>
+                <p class="student-info">192225018</p>
+                <p class="student-info">AI&ML</p>
+                <div class="student-tags">
+                    <span class="student-tag">Email: daivalathanusris5018.sse@saveetha.com</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.152448075539!2d80.01389277484239!3d13.025962287294465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bac1ae5a3bb%3A0xe16a7b4e839e6daf!2sSIMATS%20ENGINEERING!5e0!3m2!1sen!2sin!4v1737120239260!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+               
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: intelligentcomputing@saveetha.com</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/intelligentcomputingdept/" class="social-button">Instagram</a>
+                    <a href="https://x.com/Intelligentdept" class="social-button">Twitter</a>
+                    <a href="http://www.linkedin.com/in/intelligent-computing-59b794348" class="social-button">LinkedIn</a>
+                    <a href="https://www.youtube.com/channel/UCxCW2kzBmtX-FTLXYUw8RTQ" class="social-button">Youtube</a>
+    
+    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <p>© 2025 Department of Intelligent Computing - SIMATS Engineering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchStudents() {
+            const searchInput = document.querySelector('.search-input');
+            const searchTerm = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.student-card');
+
+            cards.forEach(card => {
+                const name = card.dataset.name.toLowerCase();
+                const course = card.dataset.course.toLowerCase();
+                const department = card.dataset.department.toLowerCase();
+
+                if (name.includes(searchTerm) || 
+                    course.includes(searchTerm) || 
+                    department.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s ease-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

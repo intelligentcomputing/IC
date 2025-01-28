@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Faculty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color:#095256;
+            padding: 0.01rem;
+            color:#f5f5f5;
+            position:relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .department-title {
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .department-title h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            animation: fadeInDown 1s;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(rgba(139, 194, 213, 0.307), rgb(134, 166, 166)), url('R.jpg');
+            background-size:auto;
+            background-position: center;
+            color: rgba(1, 7, 8, 0.605);
+            text-align: center;
+            padding: 10rem 2rem;
+        }
+        .hero-section img.overlay-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 50%;
+            opacity: 0.2; /* Adjust the transparency */
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.2s;
+        }
+        
+
+        .sidebar {
+            width: 280px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-nav a {
+            display: block;
+            padding: 1rem;
+            color: #5aaa95;
+            text-decoration: none;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+            border-radius: 0 5px 5px 0;
+            background: hwb(161 1% 72%);
+        }
+
+        .sidebar-nav a:hover {
+            background: linear-gradient(90deg, #095256 0%, #095256 100%);
+            color: #5aaa95;
+            border-left-color: #087f8c;
+            transform: translateX(10px);
+        }
+        
+
+        .sidebar {
+            width: 280px;
+            background: #f7fdfe;
+            padding: 1rem;
+        }
+
+        .sidebar-nav a {
+            display: block;
+            padding: 1rem;
+            color: #fafbfb;
+            text-decoration: none;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .sidebar-nav a:hover {
+            background-color: #faf3dd;
+            color: #5aaa95;
+            border-left-color: #f6f8f9;
+            transform: translateX(10px);
+        }
+        .sidebar-nav a:hover {
+            background: linear-gradient(90deg, #faf3dd 0%, #faf3dd 100%);
+            color: #095256;
+            border-left-color: #095256;
+            transform: translateX(10px);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 0.5rem 0;
+        }
+
+        .sidebar ul li a {
+            color: #1a237e;
+            text-decoration: none;
+            display: block;
+            padding: 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #1a237e;
+            color: white;
+            transform: translateX(5px);
+        } 
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+        }
+        .faculty-card {
+            background: rgb(255, 255, 255);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            background-color:#faf3dd;
+        }
+
+        .faculty-header {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .faculty-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #095256;
+        }
+
+        .faculty-info h2 {
+            color: #087f8c;
+            margin-bottom: 0.5rem;
+        }
+
+        .faculty-info p {
+            margin-bottom: 0.8rem;
+            color: #333;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: #087f8c;
+            color: #faf3dd;
+        }
+
+        .btn-secondary {
+            background-color: #5aaa95;
+            color: #faf3dd;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .publications {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #095256;
+        }
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+
+
+        .folder-card {
+            background: rgb(255, 255, 255);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .folder-card:hover {
+            transform: translateY(-5px);
+            background-color: #faf3dd;
+        }
+
+        .folder-icon {
+            font-size: 4rem;
+            color: #095256;
+            margin-bottom: 1rem;
+        }
+
+        .folder-title {
+            color: #087f8c;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .back-button {
+            background-color: #095256;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .back-button.active {
+            display: inline-block;
+        }
+
+
+        .site-footer {
+    background-color: #095256;
+    color: #faf3dd;
+    padding: 40px 20px 20px;
+    font-family: Arial, sans-serif;
+}        .folder1-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+    
+    
+    .folder1-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background-color:#5aaa95;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+        width: 320px; /* Fixed width for consistent sizing */
+    }
+    
+    .folder1-card:hover {
+        box-shadow: 0 4px 6px rgba(79, 230, 3, 0.1);
+        background-color: #087f8c;
+    }
+    
+    .folder1-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+        border-radius: 50%; /* Makes the container circular */
+        overflow: hidden; /* Ensures the image stays within the circular border */
+        border: 2px solid #e0e0e0; /* Adds a border around the circle */
+    }
+    
+    .folder1-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .folder1-title {
+        font-size: 1rem; /* Slightly larger font size */
+        font-weight: 700; /* Bolder text */
+        text-align: center;
+        color: #333; /* Darker text color for better contrast */
+    }
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.footer-section {
+    padding: 0 150px;
+}
+
+.footer-section h3 {
+    color: #faf3dd;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-section p {
+
+    color: #5aaa95;
+}
+
+.footer-section a {
+    display:flex;
+    color: #faf3dd;
+    text-decoration:dotted;
+    margin: 8px 0;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #34495e;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-button {
+    background-color: #087f8c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.social-button:hover {
+    background-color: #087f8c;
+    color: #ff0101;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    text-align: center;
+    color: #bdc3c7;
+    font-size: 14px;
+}
+.map-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .footer-section {
+            padding: 0 20px;
+        }
+
+        .address-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .address-section p {
+            color: #5aaa95;
+            margin: 5px 0;
+        }
+        #researchActivities .faculty-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.faculty-card-content {
+    display: flex;
+    align-items: center;
+}
+
+.research-image {
+    max-width: 300px; /* Adjust the size as needed */
+    max-height: 300px; /* Adjust the size as needed */
+    margin-right: 20px; /* Adds space between the image and the text box */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+.faculty-info {
+    flex: 1;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                height: 150px;
+            }
+        }
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-section {
+        padding: 0;
+    }
+}
+
+       
+
+
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .faculty-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Keep your existing header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="main.html" style="text-decoration: none;">
+                <img src="logo.png" alt="Department Logo" style="cursor: pointer;">
+                </a>
+            </div>
+            <div class="department-title">
+                <h1>DEPARTMENT OF INTELLIGENT COMPUTING</h1>
+            </div>
+            <div class="logo">
+                <a href="facilities.html" style="text-decoration: none;">
+                    <img src="logo3.jpg" alt="College Logo" style="cursor: pointer;">
+                </a>
+            </div>
+            
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-overlay">
+            <h1 class="hero-title">Research Forum</h1>
+        </div>
+    </section>
+
+    <div style="display:flex">
+        <!-- Keep your existing sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="index.html">About</a>
+                <a href="faculty.html">Faculty</a>
+                <a href="research.html">Research Forum</a>
+                <a href="mentorship.html">Mentorship</a>
+                <a href="industrial.html">Industrial Visits</a>
+                <a href="guest.html">Guest Lectures</a>
+                <a href="event.html">Events</a>
+                <a href="work.html">workshops</a>
+                <a href="conference.html">Conference / Symposium</a>
+                <a href="journals.html">Journals</a>
+                <a href="intern.html">Internships</a>
+                <a href="academic.html">Academic Offerings</a>
+                <a href="career.html">Career Opportunities</a>
+                <a href="fdp.html">FDP</a>
+                <a href="news.html">Newsletter</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Back button -->
+            <button class="back-button" onclick="showFolders()">← Back to Folders</button>
+
+            <!-- Folder View -->
+            <div class="folder-grid" id="folderView">
+                <div class="folder-card" onclick="showContent('supervisior')">
+                    <div class="folder-icon">👥</div>
+                    <div class="folder-title">Researchers</div>
+                    
+                </div>
+                <div class="folder-card" onclick="showContent('researchActivities')">
+                    <div class="folder-icon">📊</div>
+                    <div class="folder-title">Research Activities</div>
+                </div>
+            </div>
+           
+
+            <!-- Research Persons Content -->
+            <div id="supervisior" class="content-section">
+
+                <div class="folder1-grid" id="folderView">
+                    <div class="folder1-card" onclick="showContent('sheeja')">
+                        <div class="folder1-icon">
+                            <img src="s.png" alt="Folder">
+                        </div>
+                        <div class="folder1-title">Supervisor</div>
+                        
+                    </div>
+                </div>
+                <div class="folder1-grid" id="folderView">
+                    <div class="folder1-card" onclick="showContent('Jaya')">
+                        <div class="folder1-icon">
+                            <img src="ja.png" alt="Folder">
+                        </div>
+                        <div class="folder1-title">Supervisor</div>
+                        
+                    </div>
+                </div>
+                <div class="folder1-grid" id="folderView">
+                    <div class="folder1-card" onclick="showContent('ash')">
+                        <div class="folder1-icon">
+                            <img src="as.png" alt="Folder">
+                        </div>
+                        <div class="folder1-title">Supervisor</div>
+                        
+                    </div>
+                </div>
+            </div>
+                
+                <div id="sheeja" class="content-section">
+
+                <div class="faculty-card">
+                    <div class="faculty-header">
+                        <img src="ra.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>RAJAGOPAL K</h2>                                
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>21.12.2023</p>
+                            <p><strong>Educational Qualification</strong>M.E</p>
+                            <p><strong>Nature of Association:</strong>REGULAR                            </p>
+                            <p><strong>Experience (in Years):</strong>Teaching :16,Industry :Nil ,Research:</p>
+                            <p><strong>Area of Interest:</strong>IMAGE PROCESSING</p>
+                            <div class="button-group">
+                                <a href="mailto:rajagopalk9148.sse@saveetha.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+
+                <div class="faculty-card">
+                    <div class="faculty-header">
+                        <img src="al.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>Mrs.J.Alphonsa</h2>
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>25.05.24</p>
+                            <p><strong>Educational Qualification</strong>B.Tech,M.E,.</p>
+                            <p><strong>Nature of Association:</strong>Regular</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :06,Industry :Nil ,Research:</p>
+                            <p><strong>Area of Interest:</strong>AI,ML,DL,Computer vision,Image Processing</p>
+                            <div class="button-group">
+                                <a href="mailto:alphonsaj9063.sse@saveetha.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-header">
+                        <img src="ab.png" alt="Professor Smith">
+                        <div class="faculty-info">
+                            <h2>Mrs.B.Abisha</h2>
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>30.05.24</p>
+                            <p><strong>Educational Qualification</strong>B.E,M.E,.</p>
+                            <p><strong>Nature of Association:</strong>Regular</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :Nil, Industry :08, Research:</p>
+                            <p><strong>Area of Interest:</strong>Cybersecurity, Digital systems, Networking,Communication Systems</p>
+                            <div class="button-group">
+                                <a href="mailto:abishab9070.sse@saveetha.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-header">
+                        <img src="t.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>Ms. N. Thanu Priya</h2>                                
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>18.04.2024</p>
+                            <p><strong>Educational Qualification</strong>M.Sc.,M.Tech.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :6.5,Industry :Nil ,Research:</p>
+                            <p><strong>Area of Interest:</strong>Data Mining, Cyber Security.                            </p>
+                            <div class="button-group">
+                                <a href="mailto:godisloveloveisgod2024@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="v.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>VIJAYALAKSHMI R</h2>                                
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>12.12.2024</p>
+                            <p><strong>Educational Qualification</strong>M.E.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :5,Industry : 6,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>Image Processing</p>
+                            <div class="button-group">
+                                <a href="mailto:rviji15@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="faculty-header">
+                        <img src="a.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>Mrs.ABINAYA S M                            </h2>                                
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>16.12.2024                            </p>
+                            <p><strong>Educational Qualification</strong>M.E.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :6,Industry :Nil ,Research:</p>
+                            <p><strong>Area of Interest:</strong>VLSI, Neural Networks,Artificial Intelligence,Machine Learning                            </p>
+                            <div class="button-group">
+                                <a href="mailto:abinayaswathiswaramurthi@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="SMEK.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>Ms. Shree Smeka J</h2>                                
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>2023</p>
+                            <p><strong>Educational Qualification</strong>B.Tech,M.E.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :Nil,Industry :3,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>AI,ML,DL,Computer vision,Image Processing</p>
+                            <div class="button-group">
+                                <a href="mailto:jshreesmeka007@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="SUM.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>A Sumesh Mohan</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>01.10.2023</p>
+                            <p><strong>Educational Qualification</strong>M.E</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching : Nil,Industry :10,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>IMAGE PROCESSING,Security</p>
+                            <div class="button-group">
+                                <a href="mailto:mattathilsumesh@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div id="Jaya" class="content-section">
+
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="SHI.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>SHIVAKUMAR. E                            </h2>                                
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>20.11.2024                            </p>
+                            <p><strong>Educational Qualification</strong>M.Tech</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :5,Industry :Nil,Research:Nil</p>
+                            <p><strong>Area of Interest:</strong>ML and DL</p>
+                            <div class="button-group">
+                                <a href="mailto:shivugowda126@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="GREEN.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>M.SURESH</h2>                                
+                            <p><strong>Designation:</strong>JRF</p>
+                            <p><strong>Date of Joining:</strong>03.01.2025</p>
+                            <p><strong>Educational Qualification</strong>B.E ,M.E</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :8.5,Industry : Nil,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>IOT,ML AND DL</p>
+                            <div class="button-group">
+                                <a href="mailto:mjsuresh14@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="SUN.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>P Sundaram</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>10.11.2024</p>
+                            <p><strong>Educational Qualification</strong>B.E,M.E</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :15,Industry : Nil,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>IOT,WSN and AI</p>
+                            <div class="button-group">
+                                <a href="mailto:sudarmail@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="DHI.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>K.Dhivakar</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>05.11.2024</p>
+                            <p><strong>Educational Qualification</strong>B.Tech ,M.E</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :1.5,Industry : Nil ,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>IOT AND WSN</p>
+                            <div class="button-group">
+                                <a href="mailto:dhivakarkit@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="LOG.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>S.LOGANATHAN</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>05.11.2024</p>
+                            <p><strong>Educational Qualification</strong>B.Tech,M.E.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :13.7,Industry : Nil,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>IOT AND AI</p>
+                            <div class="button-group">
+                                <a href="mailto:logusonait@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="SAV.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>N.Savitha</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>18.11.2024</p>
+                            <p><strong>Educational Qualification</strong>MCA,M.E.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :10,Industry :Nil,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>IOT,WSN & AI</p>
+                            <div class="button-group">
+                                <a href="mailto:nsavithacse@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="ELA.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>T.ELAVARASI</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>05.11.2024</p>
+                            <p><strong>Educational Qualification</strong>B.E, M.E.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :1.7 ,Industry : Nil,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong> AI & ML , Data Science</p>
+                            <div class="button-group">
+                                <a href="mailto:elavarasithirumaran@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="GA.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>K.C.Gayathri</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>05.11.2024</p>
+                            <p><strong>Educational Qualification</strong>B.E, M.E.,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :10,Industry : Nil,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>IOT and AI&ML</p>
+                            <div class="button-group">
+                                <a href="mailto:gayathrikc@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ash" class="content-section">
+
+                <div class="faculty-card" data-guide="Dr. P Selvaraju">
+                    <div class="faculty-header">
+                        <img src="LALA.png" alt="Professor Johnson">
+                        <div class="faculty-info">
+                            <h2>Bhagyashree kulappa Lalasangi</h2>                                
+                            <p><strong>Designation:</strong>Research Scholar</p>
+                            <p><strong>Date of Joining:</strong>03.01.2025</p>
+                            <p><strong>Educational Qualification</strong>B.E, M.Tech,</p>
+                            <p><strong>Nature of Association:</strong>Part Time</p>
+                            <p><strong>Experience (in Years):</strong>Teaching :4.9,Industry : Nil,Research: Nil</p>
+                            <p><strong>Area of Interest:</strong>ML</p>
+                            <div class="button-group">
+                                <a href="mailto:meghanasandigiwad@gmail.com" class="btn btn-primary">Contact</a>
+                                <a href="https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5" class="btn btn-secondary">View</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+               
+
+
+            <!-- Research Activities Content -->
+            <div id="researchActivities" class="content-section">
+                <div class="faculty-card" >
+                    <h2>Research Discussion</h2>
+                    <div class="faculty-card-content">
+                        <img src="r1.png" alt="Research Image" class="research-image">
+                        <div class="faculty-info">
+                            <h3>Title: Motivational talk on Research Essentials: Building Blocks for Scholarly Success</h3>
+                            <p><strong>Presented By:</strong> Dr P Selvaraju</p>
+                            <p><strong>Date:</strong> 13.12.2024</p>
+                            <p><strong>About:</strong> Research Activities</p>
+                            <p><strong>Status:</strong> Ongoing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+                
+            </div>
+        </main>
+    </div>
+
+    <!-- Keep your existing footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Our Location</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.152448075539!2d80.01389277484239!3d13.025962287294465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528bac1ae5a3bb%3A0xe16a7b4e839e6daf!2sSIMATS%20ENGINEERING!5e0!3m2!1sen!2sin!4v1737120239260!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+               
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: intelligentcomputing@saveetha.com</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/intelligentcomputingdept/" class="social-button">Instagram</a>
+                    <a href="https://x.com/Intelligentdept" class="social-button">Twitter</a>
+                    <a href="http://www.linkedin.com/in/intelligent-computing-59b794348" class="social-button">LinkedIn</a>
+                    <a href="https://www.youtube.com/channel/UCxCW2kzBmtX-FTLXYUw8RTQ" class="social-button">Youtube</a>
+    
+    
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="footer-bottom">
+            <p>© 2025 Department of Intelligent Computing - SIMATS Engineering. All rights -NITHISHKUMAR.V.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(contentId) {
+            // Hide folder view
+            document.getElementById('folderView').style.display = 'none';
+            
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected content
+            document.getElementById(contentId).style.display = 'block';
+            
+            // Show back button
+            document.querySelector('.back-button').classList.add('active');
+        }
+
+        function showFolders() {
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show folder view
+            document.getElementById('folderView').style.display = 'grid';
+            
+            // Hide back button
+            document.querySelector('.back-button').classList.remove('active');
+
+
+           
+    }
+        
+    </script>
+</body>
+</html>

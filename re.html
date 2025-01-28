@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .supervisor-folder {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .supervisor-folder:hover {
+            transform: scale(1.1);
+        }
+        .faculty-cards {
+            display: none;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .faculty-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Supervisor Folders -->
+    <div id="supervisorFolders">
+        <img src="lab.png" class="supervisor-folder" onclick="showSupervisorFaculty('data-science')">
+        <img src="logo.png" class="supervisor-folder" onclick="showSupervisorFaculty('ai')">
+        <img src="li.jpg" class="supervisor-folder" onclick="showSupervisorFaculty('ml')">
+    </div>
+
+    <!-- Faculty Cards Container -->
+    <div id="facultyCardsContainer">
+        <!-- Data Science Supervisors -->
+        <div id="data-science-faculty" class="faculty-cards">
+            <div class="faculty-card">
+                <h3>Dr. Sarah Johnson</h3>
+                <p>Specialization: Data Science Research</p>
+                <p>Research Areas: Big Data Analytics</p>
+            </div>
+            <div class="faculty-card">
+                <h3>Dr. Michael Chen</h3>
+                <p>Specialization: Statistical Modeling</p>
+                <p>Research Areas: Predictive Analytics</p>
+            </div>
+        </div>
+
+        <!-- AI Supervisors -->
+        <div id="ai-faculty" class="faculty-cards">
+            <div class="faculty-card">
+                <h3>Dr. Raj Patel</h3>
+                <p>Specialization: Artificial Intelligence</p>
+                <p>Research Areas: Neural Networks</p>
+            </div>
+            <div class="faculty-card">
+                <h3>Dr. Emily Wong</h3>
+                <p>Specialization: AI Ethics</p>
+                <p>Research Areas: Responsible AI</p>
+            </div>
+        </div>
+
+        <!-- Machine Learning Supervisors -->
+        <div id="ml-faculty" class="faculty-cards">
+            <div class="faculty-card">
+                <h3>Dr. David Kumar</h3>
+                <p>Specialization: Machine Learning</p>
+                <p>Research Areas: Deep Learning</p>
+            </div>
+            <div class="faculty-card">
+                <h3>Dr. Lisa Rodriguez</h3>
+                <p>Specialization: ML Algorithms</p>
+                <p>Research Areas: Computer Vision</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSupervisorFaculty(domain) {
+            // Hide all faculty card sections
+            document.querySelectorAll('.faculty-cards').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show selected domain's faculty cards
+            document.getElementById(`${domain}-faculty`).style.display = 'grid';
+        }
+    </script>
+</body>
+</html>

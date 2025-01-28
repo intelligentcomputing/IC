@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #bbd0ff;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background:#e7c6ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('simats.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .facilities {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .facility-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-10px);
+            background-color: #e7c6ff;
+        }
+
+        .facility-image {
+            height: 200px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .facility-card:hover .facility-image {
+            transform: scale(1.1);
+            background-color: #e7c6ff;
+        }
+
+        .facility-info {
+            padding: 1.5rem;
+        }
+
+        .facility-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .facility-info p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            position: relative;
+            transform: translateY(-50px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-30px) translateX(-50%); }
+            60% { transform: translateY(-15px) translateX(-50%); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .facility-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a onclick="goBack()" class="back-button">← Back</a>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to SIMATS ENGINEERING</h1>
+            <h3>Department of Intelligent Computing</h3>
+            <p>     </p>
+            <p>Empowering minds, shaping futures, and creating tomorrow's leaders through world-class education and cutting-edge facilities.</p>
+        </div>
+        <div class="scroll-down">Scroll to explore ↓</div>
+    </section>
+
+    <section class="facilities">
+        <h2 class="section-title">Our World-Class Facilities</h2>
+        <div class="facility-grid">
+            <div class="facility-card" onclick="showModal('library')">
+                <div class="facility-image" style="background-image: url('li.jpg')"></div>
+                <div class="facility-info">
+                    <h3>Modern Library</h3>
+                    <p>A state-of-the-art library with over 50,000 books, digital resources, and quiet study spaces.</p>
+                </div>
+            </div>
+
+            <div class="facility-card" onclick="showModal('lab')">
+                <div class="facility-image" style="background-image: url('lab1.png')"></div>
+                <div class="facility-info">
+                    <h3>Research Labs</h3>
+                    <p>Advanced laboratories equipped with the latest technology for hands-on learning and research.</p>
+                </div>
+            </div>
+
+            <div class="facility-card" onclick="showModal('sports')">
+                <div class="facility-image" style="background-image: url('sp.jpeg')"></div>
+                <div class="facility-info">
+                    <h3>Sports Complex</h3>
+                    <p>Multi-purpose sports facilities including indoor courts, Olympic-size pool, and fitness center.</p>
+                </div>
+            </div>
+
+            <div class="facility-card" onclick="showModal('hostel')">
+                <div class="facility-image" style="background-image: url('ho.jpeg')"></div>
+                <div class="facility-info">
+                    <h3>Student Housing</h3>
+                    <p>Contemporary dormitories with modern amenities and comfortable living spaces.</p>
+                </div>
+            </div>
+
+            <div class="facility-card" onclick="showModal('cafeteria')">
+                <div class="facility-image" style="background-image: url('ca.jpeg')"></div>
+                <div class="facility-info">
+                    <h3>Campus Dining</h3>
+                    <p>Multiple dining options offering diverse, nutritious meals in a welcoming atmosphere.</p>
+                </div>
+            </div>
+
+            <div class="facility-card" onclick="showModal('auditorium')">
+                <div class="facility-image" style="background-image: url('hall.jpg')"></div>
+                <div class="facility-info">
+                    <h3>Auditorium</h3>
+                    <p>Modern auditorium for cultural events, seminars, and academic conferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for each facility -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-description"></div>
+        </div>
+    </div>
+
+    <script>
+        const facilityDetails = {
+            library: {
+                title: "Modern Library",
+                description: `
+                    <p>Our state-of-the-art library spans three floors and features:</p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li>Over 50,000 books across all disciplines</li>
+                        <li>Digital resource center with online journals and databases</li>
+                        <li>Individual and group study rooms</li>
+                        <li>24/7 access during exam periods</li>
+                        <li>Professional librarians for research assistance</li>
+                    </ul>
+                    <p>The library also includes a multimedia section, rare books collection, and a café for refreshments.</p>`
+            },
+            lab: {
+                title: "Research Laboratories",
+                description: `
+                    <p>Our cutting-edge laboratories include:</p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li>Advanced Computing Lab with latest hardware and software</li>
+                        <li>Biotechnology Research Center</li>
+                        <li>Physics and Chemistry Labs</li>
+                        <li>Engineering Workshop</li>
+                        <li>Innovation Hub for student projects</li>
+                    </ul>
+                    <p>All labs are equipped with modern safety features and supervised by experienced lab technicians.</p>`
+            },
+            sports: {
+                title: "Sports Complex",
+                description: `
+                    <p>Our comprehensive sports facilities include:</p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li>Olympic-size swimming pool</li>
+                        <li>Indoor basketball and volleyball courts</li>
+                        <li>Modern fitness center with trainers</li>
+                        <li>Cricket and football grounds</li>
+                        <li>Athletics track</li>
+                    </ul>
+                    <p>Professional coaches are available for training and guidance in all sports.</p>`
+            },
+            // Add more facility details as needed
+        };
+
+        function showModal(facility) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            
+            modalTitle.textContent = facilityDetails[facility].title;
+            modalDescription.innerHTML = facilityDetails[facility].description;
+            
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
