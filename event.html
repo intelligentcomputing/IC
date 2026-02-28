@@ -467,6 +467,7 @@
             </div>
     </div>
 
+    
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-section">
@@ -484,9 +485,10 @@
         <div class="footer-section">
             <h3>Follow Us</h3>
             <div class="social-links">
-                <a href="#" class="social-button">Instagram</a>
-                <a href="#" class="social-button">Twitter</a>
-                <a href="#" class="social-button">LinkedIn</a>
+                <a href="https://www.instagram.com/intelligentcomputingdept/" class="social-button">Instagram</a>
+                <a href="https://x.com/Intelligentdept" class="social-button">Twitter</a>
+                <a href="http://www.linkedin.com/in/intelligent-computing-59b794348" class="social-button">LinkedIn</a>
+                <a href="https://www.youtube.com/channel/UCxCW2kzBmtX-FTLXYUw8RTQ" class="social-button">Youtube</a>
             </div>
         </div>
     </div>
@@ -495,12 +497,27 @@
         <p>© 2025 Department of Intelligent Computing - SIMATS Engineering. All rights reserved.</p>
     </div>
 </footer>
+<script>
+    $(document).ready(function() {
+      $('.visit-header').click(function() {
+        const content = $(this).next('.visit-content');
+        const button = $(this).find('.expand-button');
+        
+        if (content.is(':visible')) {
+          content.slideUp(300);
+          button.text('+');
+          $(this).parent().removeClass('expanded');
+        } else {
+          content.slideDown(300);
+          button.text('-');
+          $(this).parent().addClass('expanded');
+        }
+      });
+    });
+  </script>
     
     <!-- Add this Font Awesome script to the <head> of your HTML -->
     
     
 </body>
-
 </html>
-
-
