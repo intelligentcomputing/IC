@@ -1,0 +1,944 @@
+{
+  "AshwathyMentees": [
+    {
+      "name": "KAKUMANU CHRIS NICHOLAS VACHAN DEEP",
+      "img": "a1.png",
+      "year": "3rd Year",
+      "id": "192225043"
+    },
+    {
+      "name": "THANUJA SREE K.B",
+      "img": "a2.jpg",
+      "year": "3rd Year",
+      "id": "192225044"
+    },
+    {
+      "name": "MUPPALA JASVANTH VARMA",
+      "img": "a3.jpg",
+      "year": "3rd Year",
+      "id": "192225047"
+    },
+    {
+      "name": "RAPARTHI SRINIVASA LOHITH KUMAR",
+      "img": "a4.png",
+      "year": "3rd Year",
+      "id": "192225045"
+    },
+    {
+      "name": "SHAIK MAHABOOB SUBHANI RUMAAN",
+      "img": "a5.jpg",
+      "year": "3rd Year",
+      "id": "192225048"
+    },
+    {
+      "name": "LSK TARUN KUMAR",
+      "img": "a6.jpg",
+      "year": "3rd Year",
+      "id": "192225078"
+    },
+    {
+      "name": "CHALLA MANIDEEP",
+      "img": "a7.jpg",
+      "year": "3rd Year",
+      "id": "192225049"
+    },
+    {
+      "name": "SRIRANGAM VENKATA NAGA DURGA MANIKANTHA",
+      "img": "a8.png",
+      "year": "3rd Year",
+      "id": "192225051"
+    },
+    {
+      "name": "DHAYALAN B",
+      "img": "a9.png",
+      "year": "3rd Year",
+      "id": "192225052"
+    },
+    {
+      "name": "MADATALA PALLAVI",
+      "img": "a10.png",
+      "year": "3rd Year",
+      "id": "192225053"
+    },
+    {
+      "name": "BOTTA KARTHIK KUMAR",
+      "img": "a11.png",
+      "year": "3rd Year",
+      "id": "192225058"
+    },
+    {
+      "name": "CHALLA MANIDEEP",
+      "img": "a12.png",
+      "year": "3rd Year",
+      "id": "192225059"
+    },
+    {
+      "name": "KONDAMEEDI LASYA SRI",
+      "img": "a13.png",
+      "year": "3rd Year",
+      "id": "192225060"
+    },
+    {
+      "name": "SHAIK ABBAS",
+      "img": "a14.png",
+      "year": "3rd Year",
+      "id": "192225055"
+    },
+    {
+      "name": "KONDAMEEDI ASHRITHA",
+      "img": "a15.png",
+      "year": "3rd Year",
+      "id": "192225061"
+    },
+    {
+      "name": "JAJULA MAHENDRA",
+      "img": "a16.jpg",
+      "year": "3rd Year",
+      "id": "192225062"
+    },
+    {
+      "name": "SEENE ISHAQ AHAMED S",
+      "img": "a17.jpg",
+      "year": "3rd Year",
+      "id": "192225064"
+    },
+    {
+      "name": "G DINESHA",
+      "img": "a18.png",
+      "year": "3rd Year",
+      "id": "192225067"
+    },
+    {
+      "name": "NAMBURI KRSISHNA GANESH",
+      "img": "a19.png",
+      "year": "3rd Year",
+      "id": "192225065"
+    },
+    {
+      "name": "SHAIK ABDUL NASEER AHAMED",
+      "img": "a20.png",
+      "year": "3rd Year",
+      "id": "192225068"
+    }
+  ],
+  "JayaMentees": [
+    {
+      "name": "GUDLURU VENKATA SIVA PRANEETH",
+      "img": "j1.png",
+      "year": "3rd Year",
+      "id": "192225069"
+    },
+    {
+      "name": "BANDLA GANESH",
+      "img": "j2.png",
+      "year": "3rd Year",
+      "id": "192225073"
+    },
+    {
+      "name": "SOMU VENKATESWARLU REDDY",
+      "img": "j3.png",
+      "year": "3rd Year",
+      "id": "192225074"
+    },
+    {
+      "name": "PALLA MAHENDRA",
+      "img": "j4.png",
+      "year": "3rd Year",
+      "id": "192225075"
+    },
+    {
+      "name": "DEVIREDDY MANOJ REDDY",
+      "img": "j5.png",
+      "year": "3rd Year",
+      "id": "192225076"
+    },
+    {
+      "name": "LSK TARUN KUMAR",
+      "img": "j6.png",
+      "year": "3rd Year",
+      "id": "192225078"
+    },
+    {
+      "name": "TANNERU TULASI VISHNU VARDHAN SAI",
+      "img": "j7.png",
+      "year": "3rd Year",
+      "id": "192225081"
+    },
+    {
+      "name": "ANIMALA VENKATA SAI KIRAN",
+      "img": "j8.png",
+      "year": "3rd Year",
+      "id": "192225083"
+    },
+    {
+      "name": "MANO S",
+      "img": "j9.png",
+      "year": "3rd Year",
+      "id": "192225084"
+    },
+    {
+      "name": "DHARMAPURI RAM PRASAD",
+      "img": "j10.png",
+      "year": "3rd Year",
+      "id": "192225088"
+    },
+    {
+      "name": "GOTURI PAVITHRA",
+      "img": "j13.png",
+      "year": "3rd Year",
+      "id": "192225091"
+    },
+    {
+      "name": "MUKKAMALA SRINIVASULU",
+      "img": "j11.png",
+      "year": "3rd Year",
+      "id": "192225089"
+    },
+    {
+      "name": "GOPINATH P",
+      "img": "j12.png",
+      "year": "3rd Year",
+      "id": "192225091"
+    },
+    {
+      "name": "RUDRESH S",
+      "img": "j14.png",
+      "year": "3rd Year",
+      "id": "192225092"
+    },
+    {
+      "name": "S CHARAN KUMAR ERDDY",
+      "img": "j15.jpg",
+      "year": "3rd Year",
+      "id": "192225093"
+    },
+    {
+      "name": "THUPAKULA NITHISH KUMAR",
+      "img": "j17.png",
+      "year": "3rd Year",
+      "id": "192225094"
+    },
+    {
+      "name": "SARITALA MAHAMMAD HANEEF",
+      "img": "j16.png",
+      "year": "3rd Year",
+      "id": "192225097"
+    },
+    {
+      "name": "K P NITIN KUMAR",
+      "img": "j18.png",
+      "year": "3rd Year",
+      "id": "192225085"
+    },
+    {
+      "name": "CHAVADABOINA HEMANTH SAI",
+      "img": "j19.png",
+      "year": "3rd Year",
+      "id": "192225079"
+    }
+  ],
+  "SureshMentees": [
+    {
+      "name": "HARISHRAJA K",
+      "img": "s1.jpg",
+      "year": "3rd Year",
+      "id": "192225020"
+    },
+    {
+      "name": "SANJANA SREE A",
+      "img": "s2.jpg",
+      "year": "3rd Year",
+      "id": "192225021"
+    },
+    {
+      "name": "PADMALAKSHMI R S",
+      "img": "s3.png",
+      "year": "3rd Year",
+      "id": "192225022"
+    },
+    {
+      "name": "ALLEN JOEL V",
+      "img": "s7.jpg",
+      "year": "3rd Year",
+      "id": "192225027"
+    },
+    {
+      "name": "N.PAVAN SAI",
+      "img": "s4.jpg",
+      "year": "3rd Year",
+      "id": "192225023"
+    },
+    {
+      "name": "SUPRAJA G D",
+      "img": "s5.jpg",
+      "year": "3rd Year",
+      "id": "192225024"
+    },
+    {
+      "name": "ROSHAN SIDDARTH B",
+      "img": "s6.jpg",
+      "year": "3rd Year",
+      "id": "192225025"
+    },
+    {
+      "name": "MALLELLI MOHITH GOUD",
+      "img": "s8.jpg",
+      "year": "3rd Year",
+      "id": "192225028"
+    },
+    {
+      "name": "PILLIUATTALA SWETHA SRI",
+      "img": "s9.jpg",
+      "year": "3rd Year",
+      "id": "192225029"
+    },
+    {
+      "name": "GODAVARTHI SAI SUSRITH",
+      "img": "s10.jpg",
+      "year": "3rd Year",
+      "id": "192225030"
+    },
+    {
+      "name": "I TAHIR KHAN",
+      "img": "s11.png",
+      "year": "3rd Year",
+      "id": "192225031"
+    },
+    {
+      "name": "NANDHINI P",
+      "img": "s12.jpg",
+      "year": "3rd Year",
+      "id": "192225032"
+    },
+    {
+      "name": "DHARSHAN VS",
+      "img": "s13.jpg",
+      "year": "3rd Year",
+      "id": "192225033"
+    },
+    {
+      "name": "SHAIK MOHAMMED WAJID",
+      "img": "s14.jpg",
+      "year": "3rd Year",
+      "id": "192225034"
+    },
+    {
+      "name": "TELLAKULA JEEVAN SAI",
+      "img": "s15.png",
+      "year": "3rd Year",
+      "id": "192225037"
+    },
+    {
+      "name": "KUKKADAPU SRI KUSHWANTH SAINADH",
+      "img": "s16.jpg",
+      "year": "3rd Year",
+      "id": "192225038"
+    },
+    {
+      "name": "MALLAVARAPU ROHITH      CHOWDARY",
+      "img": "s17.jpg",
+      "year": "3rd Year",
+      "id": "192225039"
+    },
+    {
+      "name": "POLOJU SAI HRUTHIK",
+      "img": "s18.jpg",
+      "year": "3rd Year",
+      "id": "192225040"
+    },
+    {
+      "name": "DUPAKUNTLA MURALI KRISHNA",
+      "img": "s19.jpg",
+      "year": "3rd Year",
+      "id": "192225041"
+    },
+    {
+      "name": "ELLASANI SHASHANK",
+      "img": "s20.jpg",
+      "year": "3rd Year",
+      "id": "192225042"
+    }
+  ],
+  "SheejaMentees": [
+    {
+      "name": "Srilalitha P",
+      "img": "SRIS.png",
+      "year": "3rd Year",
+      "id": "192225007"
+    },
+    {
+      "name": "Chethna S",
+      "img": "CTH.png",
+      "year": "3rd Year",
+      "id": "192225006"
+    },
+    {
+      "name": "Thanusri Daivala",
+      "img": "DAI.png",
+      "year": "3rd Year",
+      "id": "192225018"
+    },
+    {
+      "name": "Monish Kumaar M",
+      "img": "MON.png",
+      "year": "3rd Year",
+      "id": "192225014"
+    },
+    {
+      "name": "Saaniya Shadaap",
+      "img": "SAAA.jpg",
+      "year": "3rd Year",
+      "id": "192225004"
+    },
+    {
+      "name": "Yuktha Varshika J",
+      "img": "YUK.png",
+      "year": "3rd Year",
+      "id": "192225002"
+    },
+    {
+      "name": "Saran M",
+      "img": "SAR.jpg",
+      "year": "3rd Year",
+      "id": "192225003"
+    },
+    {
+      "name": "vanga pujitha",
+      "img": "PU.jpg",
+      "year": "3rd Year",
+      "id": "192225012"
+    },
+    {
+      "name": "Immadi Harshitha",
+      "img": "HAR.png",
+      "year": "3rd Year",
+      "id": "192225017"
+    },
+    {
+      "name": "R.sabarish",
+      "img": "nai.jpg",
+      "year": "3rd Year",
+      "id": "192224287"
+    },
+    {
+      "name": "Banoth Pranith Naik",
+      "img": "kuru.jpg",
+      "year": "3rd Year",
+      "id": "192224288"
+    },
+    {
+      "name": "KURUSHITHVEDHA.J",
+      "img": "sab.jpg",
+      "year": "3rd Year",
+      "id": "192225017"
+    },
+    {
+      "name": "M.I Mohamed Nabha",
+      "img": "naban.png",
+      "year": "3rd Year",
+      "id": "192225009"
+    },
+    {
+      "name": "K. Sai Rupak Varma",
+      "img": "varma.jpg",
+      "year": "3rd Year",
+      "id": "192225015"
+    },
+    {
+      "name": "Santhosh Kumar G",
+      "img": "sant.jpg",
+      "year": "3rd Year",
+      "id": "192224286"
+    }
+  ],
+  "ResearchersSheeja": [
+    {
+      "name": "RAJAGOPAL K",
+      "img": "/ra.png",
+      "role": "JRF",
+      "joined": "21.12.2023",
+      "edu": "M.E",
+      "area": "IMAGE PROCESSING",
+      "email": "rajagopalk9148.sse@saveetha.com"
+    },
+    {
+      "name": "Mrs.J.Alphonsa",
+      "img": "/al.png",
+      "role": "JRF",
+      "joined": "25.05.24",
+      "edu": "B.Tech,M.E",
+      "area": "AI,ML,DL,Computer vision",
+      "email": "alphonsaj9063.sse@saveetha.com"
+    },
+    {
+      "name": "Mrs.B.Abisha",
+      "img": "/ab.png",
+      "role": "JRF",
+      "joined": "30.05.24",
+      "edu": "B.E,M.E",
+      "area": "Cybersecurity, Networking",
+      "email": "abishab9070.sse@saveetha.com"
+    },
+    {
+      "name": "Ms. N. Thanu Priya",
+      "img": "/t.png",
+      "role": "JRF",
+      "joined": "18.04.2024",
+      "edu": "M.Sc.,M.Tech",
+      "area": "Data Mining, Cyber Security",
+      "email": "godisloveloveisgod2024@gmail.com"
+    },
+    {
+      "name": "VIJAYALAKSHMI R",
+      "img": "/v.png",
+      "role": "JRF",
+      "joined": "12.12.2024",
+      "edu": "M.E",
+      "area": "Image Processing",
+      "email": "rviji15@gmail.com"
+    },
+    {
+      "name": "Mrs.ABINAYA S M",
+      "img": "/a.png",
+      "role": "JRF",
+      "joined": "16.12.2024",
+      "edu": "M.E",
+      "area": "VLSI, Neural Networks",
+      "email": "abinayaswathiswaramurthi@gmail.com"
+    },
+    {
+      "name": "Ms. Shree Smeka J",
+      "img": "/SMEK.png",
+      "role": "JRF",
+      "joined": "2023",
+      "edu": "B.Tech,M.E",
+      "area": "AI, ML, DL",
+      "email": "jshreesmeka007@gmail.com"
+    },
+    {
+      "name": "A Sumesh Mohan",
+      "img": "/SUM.png",
+      "role": "Research Scholar",
+      "joined": "01.10.2023",
+      "edu": "M.E",
+      "area": "IMAGE PROCESSING, Security",
+      "email": "mattathilsumesh@gmail.com"
+    }
+  ],
+  "ResearchersJaya": [
+    {
+      "name": "SHIVAKUMAR. E",
+      "img": "/SHI.png",
+      "role": "JRF",
+      "joined": "20.11.2024",
+      "edu": "M.Tech",
+      "area": "ML and DL",
+      "email": "shivugowda126@gmail.com"
+    },
+    {
+      "name": "M.SURESH",
+      "img": "/GREEN.png",
+      "role": "JRF",
+      "joined": "03.01.2025",
+      "edu": "B.E ,M.E",
+      "area": "IOT, ML AND DL",
+      "email": "mjsuresh14@gmail.com"
+    },
+    {
+      "name": "P Sundaram",
+      "img": "/SUN.png",
+      "role": "Research Scholar",
+      "joined": "10.11.2024",
+      "edu": "B.E,M.E",
+      "area": "IOT, WSN and AI",
+      "email": "sudarmail@gmail.com"
+    },
+    {
+      "name": "K.Dhivakar",
+      "img": "/DHI.png",
+      "role": "Research Scholar",
+      "joined": "05.11.2024",
+      "edu": "B.Tech ,M.E",
+      "area": "IOT AND WSN",
+      "email": "dhivakarkit@gmail.com"
+    },
+    {
+      "name": "S.LOGANATHAN",
+      "img": "/LOG.png",
+      "role": "Research Scholar",
+      "joined": "05.11.2024",
+      "edu": "B.Tech,M.E",
+      "area": "IOT AND AI",
+      "email": "logusonait@gmail.com"
+    },
+    {
+      "name": "N.Savitha",
+      "img": "/SAV.png",
+      "role": "Research Scholar",
+      "joined": "18.11.2024",
+      "edu": "MCA,M.E",
+      "area": "IOT, WSN & AI",
+      "email": "nsavithacse@gmail.com"
+    },
+    {
+      "name": "T.ELAVARASI",
+      "img": "/ELA.png",
+      "role": "Research Scholar",
+      "joined": "05.11.2024",
+      "edu": "B.E, M.E",
+      "area": "AI & ML",
+      "email": "elavarasithirumaran@gmail.com"
+    },
+    {
+      "name": "K.C.Gayathri",
+      "img": "/GA.png",
+      "role": "Research Scholar",
+      "joined": "05.11.2024",
+      "edu": "B.E, M.E",
+      "area": "IOT and AI&ML",
+      "email": "gayathrikc@gmail.com"
+    }
+  ],
+  "ResearchersAsh": [
+    {
+      "name": "Bhagyashree Kulappa",
+      "img": "/LALA.png",
+      "role": "Research Scholar",
+      "joined": "03.01.2025",
+      "edu": "B.E, M.Tech",
+      "area": "ML",
+      "email": "meghanasandigiwad@gmail.com"
+    }
+  ],
+  "ResearchActivities": [
+    {
+      "title": "Building Blocks for Scholarly Success",
+      "presenter": "Dr P Selvaraju",
+      "date": "13.12.2024",
+      "status": "Ongoing",
+      "img": "/r1.png"
+    },
+    {
+      "title": "How to do research",
+      "presenter": "Dr P Selvaraju",
+      "date": "08.02.2025",
+      "status": "Ongoing",
+      "img": "/act2.jpg"
+    },
+    {
+      "title": "Discussion on Kidney Tumor Identification",
+      "presenter": "Mr. Rajagopal K",
+      "date": "14.02.2025",
+      "status": "Ongoing",
+      "img": "/act3.jpg"
+    },
+    {
+      "title": "Discussion on Brain Tumor Identification",
+      "presenter": "Mrs. Alphonsa J",
+      "date": "28.02.2025",
+      "status": "Ongoing",
+      "img": "/act4.jpg"
+    },
+    {
+      "title": "Discussion on Brain Tumor Identification",
+      "presenter": "B Abisha",
+      "date": "14/03/2025",
+      "status": "Ongoing",
+      "img": "/act5.jpg"
+    }
+  ],
+  "FacultyList": [
+    {
+      "name": "Dr. V SHEEJA KUMARI",
+      "image": "s.png",
+      "designation": "Professor",
+      "dateOfJoining": "18.07.2022",
+      "education": "B.Tech,M.Tech, MBA,,Ph.D.,",
+      "natureOfAssociation": "Regular",
+      "experience": "Teaching :18 yrs",
+      "areaOfInterest": "Image Processing, Neural Networks",
+      "email": "sheejakumari.sse@saveetha.com",
+      "profileLink": "https://scholar.google.com/citations?hl=en&user=a-hnoHAAAAAJ&view_op=list_works&authuser=3",
+      "publications": ""
+    },
+    {
+      "name": "Dr.V. Suresh Kumar",
+      "image": "su.png",
+      "designation": "Professor",
+      "dateOfJoining": "11.01.2024",
+      "education": "B.E., M.Tech., Ph.D.",
+      "natureOfAssociation": "Regular",
+      "experience": "Teaching :20.6, Industry : 3 ,Research:6",
+      "areaOfInterest": "VLSI, Image Processing, ES, IOT",
+      "email": "sureshkumarv.sse@saveetha.com",
+      "profileLink": "https://scholar.google.com/citations?user=GbI1lz4AAAAJ&hl=en",
+      "publications": ""
+    },
+    {
+      "name": "Dr.R.H.Aswathy",
+      "image": "as.png",
+      "designation": "Associate Professor",
+      "dateOfJoining": "12.06.24",
+      "education": "B.E,M.E,Ph.D.,",
+      "natureOfAssociation": "Regular",
+      "experience": "Teaching :12.5,Industry :Nil ,Research:Nil",
+      "areaOfInterest": "IOT ,AIML",
+      "email": "aswathyrh.sse@saveetha.com",
+      "profileLink": "https://scholar.google.com/citations?user=zLWlgh0AAAAJ&hl=en",
+      "publications": ""
+    },
+    {
+      "name": "Dr.M.Jayaprakash",
+      "image": "ja.png",
+      "designation": "Professor",
+      "dateOfJoining": "12.07.24",
+      "education": "B.Tech,M.E,Ph.D.,",
+      "natureOfAssociation": "Regular",
+      "experience": "Teaching :13,Industry :Nil ,Research:5",
+      "areaOfInterest": "IOT ,AIML",
+      "email": "jayaprakashm.sse@saveetha.com",
+      "profileLink": "https://scholar.google.com/citations?user=xaICygcAAAAJ&hl=en",
+      "publications": ""
+    },
+    {
+      "name": "Dr.NarenthiraKumar Appavu",
+      "image": "ne.png",
+      "designation": "Associate Professor",
+      "dateOfJoining": "12.07.24",
+      "education": "DCE,B.Tech,M.E,Ph.D.,",
+      "natureOfAssociation": "Regular",
+      "experience": "Teaching :13,Industry :01 ,Research:03",
+      "areaOfInterest": "AI,ML,DL,Computer vision,Image Processing",
+      "email": "narenthirakumara1025.sse@saveetha.com",
+      "profileLink": "https://docs.google.com/presentation/d/1PvPMWV_ThpwSW-MN-l5HArsirouAerHCGi2gRZyeVi4/edit#slide=id.g32377c4678e_2_5",
+      "publications": ""
+    },
+    {
+      "name": "Dr.P.selvaraju",
+      "image": "se.png",
+      "designation": "Profesor",
+      "dateOfJoining": "28.10.2023",
+      "education": "M.E,Ph.D.,",
+      "natureOfAssociation": "Regular",
+      "experience": "Teaching :37,Industry :Nil ,Research:35",
+      "areaOfInterest": "Image Processing, Combinatorial Computing",
+      "email": "sevarajup.sse@saveetha.com",
+      "profileLink": "#",
+      "publications": ""
+    }
+  ],
+  "WorkshopsData": [
+    {
+      "title": "Academic Year – 2025-2026 – 1 WORKSHOPS",
+      "image": "work1.jpg",
+      "heading": "workshops on Basics to Frontend and Backend by 8QUEENS",
+      "details": [
+        {
+          "label": "Batch",
+          "value": "2024"
+        },
+        {
+          "label": "Year",
+          "value": "First Year"
+        },
+        {
+          "label": "No of Students",
+          "value": "120"
+        },
+        {
+          "label": "Date",
+          "value": "21 Feb 2025"
+        }
+      ],
+      "paragraphs": []
+    },
+    {
+      "title": "Academic Year – 2025-2026 – 2 WORKSHOPS",
+      "image": "work3.jpg",
+      "heading": "One-Day Workshop Network Simulation with Hands On Demo by Mr. P Vinoth Kuma ( Network Administrator, Johnson Electric, Chennai )",
+      "details": [
+        {
+          "label": "Batch",
+          "value": "2024"
+        },
+        {
+          "label": "Year",
+          "value": "First Year"
+        },
+        {
+          "label": "No of Students",
+          "value": "80"
+        },
+        {
+          "label": "Date",
+          "value": "March 8 2025"
+        }
+      ],
+      "paragraphs": []
+    }
+  ],
+  "EventsData": [
+    {
+      "title": "Academic Year – 2025-2026 – 1 Seminar",
+      "image": "guest1.jpg",
+      "heading": "One Day IIC Seminar on 'Thinking Beyond Tech: Non-Tech Startup Opportunities' was an eye-opening session, inspiring students and professionals to innovate in diverse fields.",
+      "details": [],
+      "paragraphs": [
+        "A huge thank you to our esteemed resource person, Mr. Kamaleswaran, CEO of Zenosphere, Chennai, for sharing invaluable insights on entrepreneurship beyond the tech world."
+      ]
+    }
+  ],
+  "GuestLecturesData": [
+    {
+      "title": "Startup - Seminar on Ideation and Design Thinking",
+      "image": "guest1.jpg",
+      "heading": "The Department of IC – Intelligent Computing, SIMATS Engineering successfully organized a one-day seminar on Ideation and Design Thinking aimed at transforming abstract ideas into concrete startup plans.The workshop was conducted for students to enhance their innovation mindset and entrepreneurial skills.Mr. Shanthababu Pandian, Data and AI Solution Architect from Rolan IT, UK, served as the resource person.The session focused on structured ideation, problem identification, and design thinking methodologies. Students were guided on converting innovative concepts into viable startup models. Real-world examples and interactive discussions enriched the learning experience.",
+      "details": [],
+      "paragraphs": [
+        "The program encouraged creativity, critical thinking, and solution-oriented approaches. \nActive student participation made the session highly engaging and impactful. \nA total of 130 participants attended the seminar with great enthusiasm. \nThe event significantly contributed to fostering innovation and startup culture among students."
+      ]
+    }
+  ],
+  "IndustrialVisitsData": [
+    {
+      "title": "Academic Year – 2023-2024 – 1 Industrial Visit",
+      "image": "iv.jpg",
+      "heading": "Tamil Nadu Smart and Advance Manufacturing Center of Excellence TANSAM",
+      "details": [
+        {
+          "label": "Batch",
+          "value": "2023"
+        },
+        {
+          "label": "Year",
+          "value": "Third Year"
+        },
+        {
+          "label": "No of Students",
+          "value": "40"
+        },
+        {
+          "label": "Date",
+          "value": "5 Dec 2024"
+        }
+      ],
+      "paragraphs": [
+        "Students visited the software development and testing facilities, attended sessions on latest technology trends, and interacted with industry experts. The visit provided valuable insights into real-world software development practices and emerging technologies."
+      ]
+    }
+  ],
+  "ConferenceData": [],
+  "InternshipsData": [],
+  "HomeData": {
+    "aboutTitle": "About The Department",
+    "aboutContent": "The Intelligent Computing department is a dynamic hub of innovation, merging computational principles with cutting-edge intelligent algorithms to tackle contemporary challenges. It builds on the core foundations of computer science, such as software engineering, algorithm optimization, and system design, to create advanced solutions. By integrating data analytics, machine learning, and artificial intelligence, the department drives the development of systems that are adaptive, efficient, and scalable. It emphasizes automation to reduce human intervention in repetitive tasks while enhancing decision-making through data-driven insights. Research spans diverse areas, including natural language processing, robotics, and smart IoT devices. The department also focuses on interdisciplinary applications, such as AI in healthcare, predictive modeling in finance, and intelligent transportation systems. Students are trained to master both theoretical and practical aspects of intelligent computing, preparing them for real-world problem-solving.",
+    "keyHighlights": [
+      {
+        "title": "Comprehensive Programs",
+        "desc": "Comprehensive programs blending core computer science with advanced topics like AI, machine learning, data science, and IoT.",
+        "color": "#00f0ff"
+      },
+      {
+        "title": "Modern Labs",
+        "desc": "Modern labs equipped with high-performance computing systems, AI development platforms, and IoT-enabled environments",
+        "color": "#8b5cf6"
+      },
+      {
+        "title": "Pioneering Research",
+        "desc": "Active involvement in pioneering research areas such as deep learning, natural language processing, robotics, and smart systems",
+        "color": "#FCD34D"
+      },
+      {
+        "title": "Partnerships",
+        "desc": "Partnerships with top tech companies for internships, projects, and live problem-solving initiatives.",
+        "color": "#10B981"
+      }
+    ],
+    "salientFeatures": [
+      "Industry-Curated Autonomous Curriculum tailored to meet current and future technological demands",
+      "Research-Oriented Curriculum emphasizing advancements in futuristic technologies",
+      "Product Development Labs integrated across all semesters to foster hands-on innovation",
+      "Innovative Pedagogical Techniques supported by smart classrooms equipped with ViewSonic boards and LCD projectors for enhanced learning.",
+      "Honored with the Virtusa Long-Term Relationship Award.",
+      "Active student engagement in the Google Cloud Readiness Program"
+    ]
+  },
+  "AcademicData": [
+    {
+      "category": "Undergraduate Programs",
+      "icon": "??",
+      "programs": [
+        {
+          "title": "B.Tech / B.E",
+          "desc": "A cutting-edge program designed to prepare students for the future of technology with a focus on artificial intelligence and advanced computing."
+        },
+        {
+          "title": "Specialized Elective Courses",
+          "desc": "Comprehensive coursework in AI, machine learning, and data science with hands-on project experience."
+        }
+      ]
+    },
+    {
+      "category": "Postgraduate Programs",
+      "icon": "??",
+      "programs": [
+        {
+          "title": "M.Tech / M.E",
+          "desc": "Advanced studies in artificial intelligence and intelligent systems with industry collaboration."
+        },
+        {
+          "title": "Research Opportunities",
+          "desc": "Engage in cutting-edge research projects focused on developing AI-driven solutions for real-world challenges."
+        }
+      ]
+    },
+    {
+      "category": "Doctoral Research",
+      "icon": "??",
+      "programs": [
+        {
+          "title": "Ph.D. Programs",
+          "desc": "Specialized research opportunities in AI for healthcare, robotics, and emerging technologies with expert guidance and state-of-the-art facilities."
+        }
+      ]
+    }
+  ],
+  "CareerData": [
+    {
+      "title": "AI / ML Engineer",
+      "desc": "Design, develop, and deploy scalable artificial intelligence models and sophisticated machine learning algorithms."
+    },
+    {
+      "title": "Data Scientist",
+      "desc": "Analyze massive datasets to extract actionable insights and build complex predictive pipelines."
+    },
+    {
+      "title": "Software Developer",
+      "desc": "Engineer complex, intelligent software systems tailored for advanced modern computing environments."
+    },
+    {
+      "title": "Research Scientist",
+      "desc": "Pioneer new developments in artificial intelligence, pushing the boundaries of what machines understand."
+    },
+    {
+      "title": "Cyber Analyst",
+      "desc": "Protect critical data infrastructures using AI-driven threat detection and cutting-edge security principles."
+    },
+    {
+      "title": "IoT & Edge Dev",
+      "desc": "Create connected, smart devices by integrating intelligent computing architectures at the hardware edge."
+    }
+  ],
+  "AdminSettings": [
+    {
+      "key": "password",
+      "value": "admin777",
+      "_val": "admin777"
+    },
+    {
+      "key": "secret_pin",
+      "value": "098765",
+      "_val": "098765"
+    }
+  ]
+}
